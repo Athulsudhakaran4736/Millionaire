@@ -1,0 +1,179 @@
+body {
+  margin: 0px;
+}
+.app {
+  height: 100vh;
+  display: flex;
+  background-color: #020230;
+  color: white;
+}
+.main {
+  width: 75%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+    url('./assets/bg.jpg') center;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  height: 50%;
+  position: relative;
+}
+.timer {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid white;
+  font-size: 30px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 10px;
+  left: 80px;
+}
+.bottom {
+  height: 50%;
+}
+.pyramid {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pyramidList {
+  list-style: none;
+  width: 100%;
+  padding: 20px;
+}
+.pyramidListItems {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.pyramidListItems.active {
+  background-color: teal;
+  border-radius: 5px;
+}
+.pyramidListItemNumber {
+  width: 30%;
+  font-size: 18px;
+  font-weight: 100;
+}
+.pyramidListItemPrice {
+  font-size: 20px;
+  font-weight: 300;
+}
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trivia {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.question {
+  width: 80%;
+  padding: 20px;
+  background: linear-gradient(#102341, black);
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  text-align: center;
+  align-items: center;
+}
+.answers {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.answer {
+  width: 40%;
+  margin: 0px 10px 20px 10px;
+  background: linear-gradient(#0e0124, #22074d);
+  border: 1px solid white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.answer:hover,
+.answer.active {
+  background: mediumblue;
+}
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: green;
+  }
+}
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: crimson;
+  }
+}
+.userStart {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+}
+
+.userStartInput {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+.userStartInput:focus-visible {
+    outline: none;
+}
+.userStartButton {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+}
